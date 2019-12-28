@@ -8,16 +8,22 @@
     <title>rafahel site</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a427fd7f5c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="wrap">
-        <header id="header" class="clearfix">
+        <header class="clearfix">
             <img id="logo" src="img/logo.png">
+            <span id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
             <div>
                 <h1>j. rafahel park</h1>
-                <ul>
+                <ul id="gnb">
                     <li><a href="#about-me">about me</a></li>
                     <li><a href="#portfolio">portfolio</a></li>
                     <li><a href="#contact-me">contact me</a></li>
@@ -98,35 +104,35 @@
                     </div>
                     <div id="skill">
                         <h4>Skill</h4>
-                        <p>Robotics and Motion Control</p>
-                        <p>- Kinematics and Dynamics for Serial/Parallel Robot</p>
-                        <p>- Position and Force Control</p>
-                        <p>- Gravity Compensation and Force Feedback Control</p>
-                        <p>- 3D Visualization</p>
-                        <br />
-                        <p>Computer Language</P>
-                        <p>- C, C++, C#, MATLAB/SIMULINK, VHDL</P>
-                        <p>- Java, JavaScript, Phython</P>
-                        <br />
-                        <p>Framework & Library</P>
-                        <p>- MFC, Node.js, Express.js, React.js, jQuery, Plotly.js</P>
-                        <br />
-                        <p>Database</p>
-                        <p>- MySQL, MongoDB</p>
+                        <dl>
+                            <dt>Robotics and Motion Control</dt>
+                            <dd>Kinematics and Dynamics for Serial/Parallel Robot</dd>
+                            <dd>Position and Force Control</dd>
+                            <dd>Gravity Compensation and Force Feedback Control</dd>
+                            <dd>3D Visualization</dd>
+                            <dt>Computer Language</dt>
+                            <dd>C, C++, C#, MATLAB/SIMULINK, VHDL</dd>
+                            <dd>Java, JavaScript, Phython</dd>
+                            <dt>Framework & Library</dt>
+                            <dd>MFC, Node.js, Express.js, React.js, jQuery, Plotly.js</dd>
+                            <dt>Database</dt>
+                            <dd>MySQL, MongoDB</dd>
+                        </dl>
                     </div>
                     <div id="interest">
                         <h4>Interest</h4>
-                        <p>Machine Learning</p>
-                        <p>- Reinforcement Learning for Robot Motion</P>
-                        <br />
-                        <p>Web Programming with JavaScript</p>
-                        <p>- Full Stack JavaScript(MERN)</P>
-                        <p>- Cross-platform Development(React Native)</P>
-                        <p>- Web Crawling</P>
+                        <dl>
+                            <dt>Machine Learning</dt>
+                            <dd>Reinforcement Learning for Robot Motion</dd>
+                            <dt>Web Programming with JavaScript</dt>
+                            <dd>Full Stack JavaScript(MERN)</dd>
+                            <dd>Cross-platform Development(React Native)</dd>
+                            <dd>Web Crawling</dd>
+                        </dl>
                     </div>
                 </article>
                 <div class="divider">
-                    <a href="#header"><i class="fas fa-chevron-up"></i></a>
+                    <a href="#wrap"><i class="fas fa-chevron-up"></i></a>
                     <hr />
                 </div>
                 <article id="portfolio">
@@ -175,7 +181,7 @@
                     </div>
                 </article>
                 <div class="divider">
-                    <a href="#header"><i class="fas fa-chevron-up"></i></a>
+                    <a href="#wrap"><i class="fas fa-chevron-up"></i></a>
                     <hr />
                 </div>
                 <article id="contact-me">
@@ -186,7 +192,7 @@
                     </div>
                 </article>
                 <div class="divider">
-                    <a href="#header"><i class="fas fa-chevron-up"></i></a>
+                    <a href="#wrap"><i class="fas fa-chevron-up"></i></a>
                     <hr />
                 </div>
             </section>
@@ -200,6 +206,11 @@
             </div>
         </footer>
     </div>
+    <script>
+        $("#hamburger-btn").click(function () {
+            $("#gnb").stop().slideToggle('fast'); // stop, 현재하고 있는 작업 멈춤
+        });
+    </script>
 </body>
 
 </html>
